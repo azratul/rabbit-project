@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: jperez20021
-          image: ghcr.io/jperez20021/demo-go:latest
+          image: ghcr.io/azratul/demo-go:latest
           ports:
             - containerPort: 8000
