@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jperez20021
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jperez20021
+  template:
+    metadata:
+      labels:
+        app: jperez20021
+    spec:
+      containers:
+        - name: jperez20021
+          image: ghcr.io/jperez20021/demo-go:latest
+          ports:
+            - containerPort: 8000
