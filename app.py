@@ -5,7 +5,7 @@ from fluent import handler
 import logging
 
 fluent_host = os.getenv("FLUENTD_HOST", "localhost") 
-fluent_port = os.getenv("FLUENTD_PORT", 24224)
+fluent_port = int(os.getenv("FLUENTD_PORT", 24224))
 
 app_name = "flask-rabbit"
 
