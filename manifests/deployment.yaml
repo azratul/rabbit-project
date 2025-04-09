@@ -1,19 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jperez20021
+  name: demo-rabbit
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jperez20021
+      app: demo-rabbit
   template:
     metadata:
       labels:
-        app: jperez20021
+        app: demo-rabbit
     spec:
       containers:
-        - name: jperez20021
-          image: ghcr.io/azratul/demo-go:latest
+        - name: demo-rabbit
+          image: ghcr.io/azratul/rabbit-project:latest
           ports:
-            - containerPort: 8000
+            - containerPort: 5000
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
